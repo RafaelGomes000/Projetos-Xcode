@@ -24,6 +24,7 @@ class ViewController: UITableViewController {
         signos.append("Virgem")
         signos.append("Libra")
         signos.append("Escorpiao")
+        signos.append("Sargitario")
         signos.append("Capricornio")
         signos.append("Aquario")
         signos.append("Peixes")
@@ -32,19 +33,35 @@ class ViewController: UITableViewController {
         //Configurar significado
         significadoSignos.append("O ariano...")
         significadoSignos.append("Touro...")
-        signos.append("3")
-        signos.append("4")
-        signos.append("5")
-        signos.append("6")
-        signos.append("7")
-        signos.append("8")
-        signos.append("9")
-        signos.append("10")
-        signos.append("11")
-        
+        significadoSignos.append("3")
+        significadoSignos.append("4")
+        significadoSignos.append("5")
+        significadoSignos.append("6")
+        significadoSignos.append("7")
+        significadoSignos.append("8")
+        significadoSignos.append("9")
+        significadoSignos.append("10")
+        significadoSignos.append("11")
+        significadoSignos.append("12")
         
     }
 
-
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return signos.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let celulaReuso = "celulaReuso"
+        let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath)
+        celula.textLabel?.text = signos[indexPath.row]
+        
+        return celula
+    }
+    
 }
 
