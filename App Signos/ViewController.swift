@@ -7,11 +7,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
+    
+    var signos: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //Configurar signos
+        signos.append("Aries")
+        signos.append("Touro")
+        signos.append("Gemeos")
+        signos.append("Cancer")
+        signos.append("Leao")
+        signos.append("Virgem")
+        signos.append("Libra")
+        signos.append("Escorpiao")
+        signos.append("Capricornio")
+        signos.append("Aquario")
+        signos.append("Peixes")
+        
     }
 
 
