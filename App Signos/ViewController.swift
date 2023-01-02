@@ -42,7 +42,7 @@ class ViewController: UITableViewController {
         significadoSignos.append("9")
         significadoSignos.append("10")
         significadoSignos.append("11")
-        
+        significadoSignos.append("12")
         
     }
 
