@@ -9,18 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //Configurando App
+    //configurando App
     @IBOutlet weak var textoCampo: UITextView!
     let chave = "minhaAnotacao"
     
     @IBAction func salvarAnotacao(_ sender: Any) {
         
-        //Guardando dados
+    //salvando texto
         if let text = textoCampo.text{
             UserDefaults.standard.set(text, forKey: chave)
         }
     }
-    
+    //chamando texto salvo
     func recuperarAnotacao() -> String{
         
         if let textoRecuperado = UserDefaults.standard.object(forKey: chave){
@@ -29,6 +29,17 @@ class ViewController: UIViewController {
             
         return ""
     }
+    
+    //fechar teclado ao tocar na tela
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    //esconder barra
+    override var prefersStatusBarHidden: Bool {
+        true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
