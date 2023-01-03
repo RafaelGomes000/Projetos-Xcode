@@ -21,28 +21,28 @@ class ViewController: UITableViewController {
         filme = Filme(titulo: "Filme 2", descricao: "descricao 2", imagem: UIImage(named: "filme2")!)
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 3", descricao: "descricao 3", imagem: UIImage(named: "filme2")!)
+        filme = Filme(titulo: "Filme 3", descricao: "descricao 3", imagem: UIImage(named: "filme3")!)
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 4", descricao: "descricao 4", imagem: UIImage(named: "filme2")!)
+        filme = Filme(titulo: "Filme 4", descricao: "descricao 4", imagem: UIImage(named: "filme4")!)
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 5", descricao: "descricao 5", imagem: UIImage(named: "filme2")!)
+        filme = Filme(titulo: "Filme 5", descricao: "descricao 5", imagem: UIImage(named: "filme5")!)
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 6", descricao: "descricao 6", imagem: UIImage(named: "filme2")!)
+        filme = Filme(titulo: "Filme 6", descricao: "descricao 6", imagem: UIImage(named: "filme6")!)
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 7", descricao: "descricao 7", imagem: UIImage(named: "filme2")!)
+        filme = Filme(titulo: "Filme 7", descricao: "descricao 7", imagem: UIImage(named: "filme7")!)
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 8", descricao: "descricao 8", imagem: UIImage(named: "filme2")!)
+        filme = Filme(titulo: "Filme 8", descricao: "descricao 8", imagem: UIImage(named: "filme8")!)
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 9", descricao: "descricao 9", imagem: UIImage(named: "filme2")!)
+        filme = Filme(titulo: "Filme 9", descricao: "descricao 9", imagem: UIImage(named: "filme9")!)
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 10", descricao: "descricao 10", imagem: UIImage(named: "filme2")!)
+        filme = Filme(titulo: "Filme 10", descricao: "descricao 10", imagem: UIImage(named: "filme10")!)
         filmes.append(filme)
     }
     
@@ -58,9 +58,10 @@ class ViewController: UITableViewController {
         let filme = filmes [indexPath.row]
         let celulaReuso = "celulaReuso"
         
-        let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath)
-        celula.textLabel?.text = filme.titulo
-        celula.imageView?.image = filme.imagem
+        let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath) as! FilmeCelula
+        celula.filmeImageView.image = filme.imagem
+        celula.tituloLabel.text = filme.titulo
+        celula.descricaoLabel.text = filme.descricao
         
         return celula
     }

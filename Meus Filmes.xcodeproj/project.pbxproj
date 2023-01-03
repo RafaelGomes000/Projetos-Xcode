@@ -14,6 +14,7 @@
 		1217A3A829636EF40022D805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1217A3A729636EF40022D805 /* Assets.xcassets */; };
 		1217A3AB29636EF40022D805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1217A3A929636EF40022D805 /* LaunchScreen.storyboard */; };
 		1217A3B3296370610022D805 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217A3B2296370610022D805 /* Filme.swift */; };
+		1217A3B52963AE500022D805 /* FilmeCelula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1217A3B42963AE500022D805 /* FilmeCelula.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1217A3AA29636EF40022D805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1217A3AC29636EF40022D805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1217A3B2296370610022D805 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
+		1217A3B42963AE500022D805 /* FilmeCelula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeCelula.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1217A3A229636EEF0022D805 /* ViewController.swift */,
 				1217A3B2296370610022D805 /* Filme.swift */,
 				1217A3A429636EEF0022D805 /* Main.storyboard */,
+				1217A3B42963AE500022D805 /* FilmeCelula.swift */,
 				1217A3A729636EF40022D805 /* Assets.xcassets */,
 				1217A3A929636EF40022D805 /* LaunchScreen.storyboard */,
 				1217A3AC29636EF40022D805 /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1217A3A329636EEF0022D805 /* ViewController.swift in Sources */,
+				1217A3B52963AE500022D805 /* FilmeCelula.swift in Sources */,
 				1217A39F29636EEF0022D805 /* AppDelegate.swift in Sources */,
 				1217A3A129636EEF0022D805 /* SceneDelegate.swift in Sources */,
 				1217A3B3296370610022D805 /* Filme.swift in Sources */,
