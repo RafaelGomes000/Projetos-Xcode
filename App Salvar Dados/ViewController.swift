@@ -11,7 +11,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //UserDefaults.standard.set("azul", forKey: "corFundo")
+        //var texto = UserDefaults.standard.object(forKey: "corFundo")
+        //print(texto)
+        
+        //var comidas: [String] = ["Pizza", "Torta", "Lasanha"]
+        //UserDefaults.standard.set(comidas, forKey: "comidas")
+        
+        UserDefaults.standard.removeObject(forKey: "corFundo")
+        
+        var comidas = UserDefaults.standard.object(forKey: "corFundo")
+        print(comidas)
     }
 
 
