@@ -12,8 +12,14 @@ class CadastroTarefaViewController: UIViewController {
     @IBOutlet weak var tarefaCampo: UITextField!
     
     @IBAction func adicionarTarefa(_ sender: Any) {
-        if let campoTarefa = tarefaCampo.text{
+        if let textoDigitado = tarefaCampo.text{
+            let tarefa = TarefaUserDefaults()
+            tarefa.salvar(tarefa: textoDigitado)
+            tarefaCampo.text = ""
             
+            let dados = tarefa.listar()
+            
+            print(dados)
         }
     }
     
