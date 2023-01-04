@@ -46,10 +46,7 @@ class TarefasTableViewController: UITableViewController {
         return celula
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return.delete
-    }
-        
+    //Adicionando delete
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
             let tarefa = TarefaUserDefaults()
