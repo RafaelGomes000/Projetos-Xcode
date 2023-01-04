@@ -13,6 +13,7 @@
 		1226866529660EF5008A60CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1226866329660EF5008A60CA /* Main.storyboard */; };
 		1226866729660EF7008A60CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1226866629660EF7008A60CA /* Assets.xcassets */; };
 		1226866A29660EF7008A60CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1226866829660EF7008A60CA /* LaunchScreen.storyboard */; };
+		1226867329660F5E008A60CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1226867229660F5E008A60CA /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1226866629660EF7008A60CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1226866929660EF7008A60CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1226866B29660EF7008A60CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1226867229660F5E008A60CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1226867329660F5E008A60CA /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				1226865C29660EF5008A60CA /* localizacao usuario */,
 				1226865B29660EF5008A60CA /* Products */,
+				1226867129660F5E008A60CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,14 @@
 				1226866B29660EF7008A60CA /* Info.plist */,
 			);
 			path = "localizacao usuario";
+			sourceTree = "<group>";
+		};
+		1226867129660F5E008A60CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1226867229660F5E008A60CA /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
