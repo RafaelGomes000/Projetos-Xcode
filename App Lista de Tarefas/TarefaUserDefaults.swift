@@ -12,6 +12,15 @@ class TarefaUserDefaults{
     let chave = "listaTarefa"
     var tarefas: [String] = []
     
+    func remover (indice: Int){
+        
+        //Recuperar tarefa ja salva
+        tarefas = listar()
+        
+        tarefas.remove(at: indice)
+        UserDefaults.standard.set(tarefas, forKey: chave)
+    }
+    
     func salvar(tarefa: String){
         
         //Recuperar tarefa ja salva
