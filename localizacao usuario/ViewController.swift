@@ -27,6 +27,29 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         gerenciadorLocal.startUpdatingLocation()
     }
 
+    //atualizando localizacao em tempo real
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let localizacaoUsuario: CLLocation = locations.last!
+        
+        //monta exibicao do mapa
+        let latitude: CLLocationDegrees = localizacaoUsuario.coordinate.latitude
+        let longitute: CLLocationDegrees = localizacaoUsuario.coordinate.longitude
+                    
+                    //Definindo zoom no mapa
+        let deltaLatitude: CLLocationDegrees = 0.008
+        let deltaLongitude: CLLocationDegrees = 0.008
+                    
+                    //Chamando coordenadas e zoom
+        let areaVisualizacao: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLatitude, longitudeDelta: deltaLongitude)
+        let localizacao: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitute)
+                    
+                    //Armazenando coordenadas
+        let regiao: MKCoordinateRegion = MKCoordinateRegion(center: localizacao, span: areaVisualizacao)
+                    
+                    //Definindo localizacao
+        mapa.setRegion(regiao, animated: true)
+              
+    }
 
 }
 
