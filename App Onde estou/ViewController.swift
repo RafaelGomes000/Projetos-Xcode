@@ -35,10 +35,45 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let longitude = localizacaoUsuario.coordinate.longitude
         let latitude = localizacaoUsuario.coordinate.latitude
         
+        let deltaLatitude: CLLocationDegrees = 0.003
+        let deltaLongitude: CLLocationDegrees = 0.003
+        
         longitudeLabel.text = String(longitude)
         latitudeLabel.text = String(latitude)
         
         velocidadeLabel.text = String(localizacaoUsuario.speed)
+        
+        
+        let areaAproximacao: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: deltaLatitude, longitudeDelta: deltaLongitude)
+        let localizacao: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let regiao: MKCoordinateRegion = MKCoordinateRegion(center: localizacao, span: areaAproximacao)
+        
+        //mostrando localizacao na tela
+        mapa.setRegion(regiao, animated: true)
+        
+        //endereco
+        CLGeocoder().reverseGeocodeLocation(localizacaoUsuario) { (detalhesLocal, erro) in
+            
+            if erro == nil{
+                
+                if let dadosLocal = detalhesLocal?.first{
+                    var thoroughfare = ""
+                    if dadosLocal.thoroughfare != nil{
+                    thoroughfare = dadosLocal.thoroughfare!
+                        
+                    var subThoroughfare = ""
+                    if dadosLocal.subThoroughfare != nil{
+                    thoroughfare = dadosLocal.subThoroughfare!
+                    }
+                    
+                }else{
+                    
+                    print(erro)
+                    
+                }
+                
+            }
+        }
     }
     
     //Alerta para autorizar localizaçao
