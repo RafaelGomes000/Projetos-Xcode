@@ -92,7 +92,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.62828012454325688" green="0.78748498781762943" blue="0.38891980502378487" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEb-HQ-QcX">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEb-HQ-QcX">
                                 <rect key="frame" x="0.0" y="260" width="375" height="407"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="407" id="rDa-G4-uC4"/>

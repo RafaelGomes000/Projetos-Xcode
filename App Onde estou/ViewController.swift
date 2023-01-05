@@ -30,7 +30,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     //passando localizacao
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        var localizacaoUsuario = locations.last!
+        let localizacaoUsuario = locations.last!
         
         let longitude = localizacaoUsuario.coordinate.longitude
         let latitude = localizacaoUsuario.coordinate.latitude
@@ -47,10 +47,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         if status != CLAuthorizationStatus.authorizedWhenInUse{
             
             //mensagem alerta
-            var alertaController = UIAlertController(title: "Permissao de localizaçap", message: "Necessário parmissao para acesso a sua localizaçao. Por favor habilite.", preferredStyle: .alert)
+            let alertaController = UIAlertController(title: "Permissao de localizaçap", message: "Necessário parmissao para acesso a sua localizaçao. Por favor habilite.", preferredStyle: .alert)
             
             //opcao configurar
-            var acaoConfigurar = UIAlertAction(title: "Abrir configuraçao", style: .default, handler: {(alertaConfiguracoes) in
+            let acaoConfigurar = UIAlertAction(title: "Abrir configuraçao", style: .default, handler: {(alertaConfiguracoes) in
                 
                 if let configuracoes = NSURL(string: UIApplication.openSettingsURLString){
                     UIApplication.shared.open(configuracoes as URL)
@@ -59,7 +59,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             })
             
             //opcao cancelar
-            var acaoCancelar = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+            let acaoCancelar = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
             
             alertaController.addAction(acaoConfigurar)
             alertaController.addAction(acaoCancelar)
